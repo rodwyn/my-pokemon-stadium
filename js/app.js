@@ -6,10 +6,10 @@ new Vue({
     gameIsRunnig: false
   },
   methods: {
-    // startGame: function() {
-    //   this.gameIsRunnig = true;
-    //   this.playerHealth = 100;
-    //   this.monsterHealth = 100;
-    // }
+    startGame: function() {
+      this.gameIsRunnig = true;
+      this.playerHealth = 100;
+      this.monsterHealth = 100;
+    }
   }
 });
