@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div id="app">
     <section class="row">
         <div class="small-6 columns">
@@ -57,6 +65,8 @@
         </div>
     </section>
 </div>
+    <h1>Button</h1>
+    <div class="fb-share-button" data-href="https://rodwyn.github.io/my-pokemon-stadium/" data-layout="button" data-size="small" data-mobile-iframe="false"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frodwyn.github.io%2Fmy-pokemon-stadium%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
 <script src="js/app.js"></script>
 </body>
 </html>
