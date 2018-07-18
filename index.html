@@ -39,11 +39,7 @@
               },
               // callback
               function(response) {
-                if (response &amp;&amp; !response.error_message) {
-                  alert('Posting completed.');
-                } else {
-                  alert('Error while posting.');
-                }
+                console.log(response);
               }
             );
         };
