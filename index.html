@@ -14,13 +14,12 @@
 <body>
     <div id="fb-root"></div>
     <script>
-        window.fbAsyncInit = function() {
+        /*window.fbAsyncInit = function() {
             FB.init({
-              appId      : 'your-app-id',
               xfbml      : true,
               version    : 'v3.0'
             });
-          };
+          };*/
 
         (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -30,8 +29,9 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
         var shareButton = document.querySelector('.facebook');
-        shareButton.onclick = function() {
-            console.log("hello");
+        console.log(shareButton);
+        shareButton.addEventListener('click', function () {
+          console.log("hello");
             FB.ui(
               {
                 method: 'share',
@@ -42,7 +42,7 @@
                 console.log(response);
               }
             );
-        };
+        });
     </script>
 <div id="app">
     <section class="row">
