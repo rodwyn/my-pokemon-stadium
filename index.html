@@ -14,6 +14,10 @@
 <body>
     <div id="fb-root"></div>
     <script>
+        (function() {
+            var shareButton = document.querySelector('.facebook');
+            console.log(shareButton);
+        })();
         /*window.fbAsyncInit = function() {
             FB.init({
               xfbml      : true,
@@ -28,8 +32,7 @@
   js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.0';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-        var shareButton = document.querySelector('.facebook');
-        console.log(shareButton);
+        
         shareButton.addEventListener('click', function () {
           console.log("hello");
             FB.ui(
