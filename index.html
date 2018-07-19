@@ -14,6 +14,11 @@
 <body>
     <div id="fb-root"></div>
     <script>
+        document.onreadystatechange = () => {
+          if (document.readyState === 'complete') {
+            console.log("document ready");
+          }
+        };
         (function() {
             var shareButton = document.querySelector("button.ui.facebook.button");
             console.log(shareButton);
