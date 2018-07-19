@@ -132,6 +132,6 @@ div.ui.facebook.button {
     padding: 8px 6px;
 }
 
-.facebook[class^="icon-"], .facebook[class*=" icon-"] {
+.facebook span {
     margin-right: 6px;
 }
