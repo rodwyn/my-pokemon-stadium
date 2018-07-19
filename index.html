@@ -17,12 +17,8 @@
         document.onreadystatechange = () => {
           if (document.readyState === 'complete') {
             var shareButton = document.querySelector("button.ui.facebook.button");
-            console.log(shareButton);
-          }
-        };
-        (function() {
             
-            /*shareButton.addEventListener('click', function () {
+            shareButton.addEventListener('click', function () {
               console.log("hello");
                 FB.ui(
                   {
@@ -34,7 +30,12 @@
                     console.log(response);
                   }
                 );
-            });*/
+            });
+          }
+        };
+        (function() {
+            
+            
         })();
         /*window.fbAsyncInit = function() {
             FB.init({
