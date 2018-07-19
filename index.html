@@ -17,6 +17,19 @@
         (function() {
             var shareButton = document.querySelector('.facebook');
             console.log(shareButton);
+            /*shareButton.addEventListener('click', function () {
+              console.log("hello");
+                FB.ui(
+                  {
+                    method: 'share',
+                    href: 'https://rodwyn.github.io/my-pokemon-stadium/',
+                  },
+                  // callback
+                  function(response) {
+                    console.log(response);
+                  }
+                );
+            });*/
         })();
         /*window.fbAsyncInit = function() {
             FB.init({
@@ -32,20 +45,6 @@
   js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.0';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-        
-        shareButton.addEventListener('click', function () {
-          console.log("hello");
-            FB.ui(
-              {
-                method: 'share',
-                href: 'https://rodwyn.github.io/my-pokemon-stadium/',
-              },
-              // callback
-              function(response) {
-                console.log(response);
-              }
-            );
-        });
     </script>
 <div id="app">
     <section class="row">
