@@ -16,12 +16,12 @@
     <script>
         document.onreadystatechange = () => {
           if (document.readyState === 'complete') {
-            console.log("document ready");
+            var shareButton = document.querySelector("button.ui.facebook.button");
+            console.log(shareButton);
           }
         };
         (function() {
-            var shareButton = document.querySelector("button.ui.facebook.button");
-            console.log(shareButton);
+            
             /*shareButton.addEventListener('click', function () {
               console.log("hello");
                 FB.ui(
