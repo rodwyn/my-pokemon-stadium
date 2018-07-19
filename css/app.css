@@ -122,3 +122,16 @@ button {
 .icon-upload:before {
   content: "\e961";
 }
+
+div.ui.facebook.button {
+    background-color: lightgray;
+    border: gray solid thin;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 6px;
+}
+
+.facebook[class^="icon-"], .facebook[class*=" icon-"] {
+    margin-right: 6px;
+}
