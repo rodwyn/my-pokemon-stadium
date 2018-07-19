@@ -95,11 +95,11 @@ button {
 
 @font-face {
   font-family: 'iconfont';
-  src:  url('fonts/icon-font.eot?6otsgi');
-  src:  url('fonts/icon-font.eot?6otsgi#iefix') format('embedded-opentype'),
-    url('fonts/icon-font.ttf?6otsgi') format('truetype'),
-    url('fonts/icon-font.woff?6otsgi') format('woff'),
-    url('fonts/icon-font.svg?6otsgi#icon-font') format('svg');
+  src:  url('../fonts/icon-font.eot?6otsgi');
+  src:  url('../fonts/icon-font.eot?6otsgi#iefix') format('embedded-opentype'),
+    url('../fonts/icon-font.ttf?6otsgi') format('truetype'),
+    url('../fonts/icon-font.woff?6otsgi') format('woff'),
+    url('../fonts/icon-font.svg?6otsgi#icon-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
