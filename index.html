@@ -17,6 +17,7 @@
         document.onreadystatechange = () => {
           if (document.readyState === 'complete') {
               window.fbAsyncInit = function() {
+                  alert("fbAsyncInit");
                 FB.init({
                   appId      : 'facebook-jssdk',
                   status     : true,
