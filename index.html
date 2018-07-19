@@ -16,15 +16,12 @@
     <script>
         document.onreadystatechange = () => {
           if (document.readyState === 'complete') {
-              window.fbAsyncInit = function() {
-                  alert("fbAsyncInit");
-                FB.init({
+              FB.init({
                   appId      : 'facebook-jssdk',
                   status     : true,
                   xfbml      : true,
                   version    : 'v3.0'
                 });
-              };
             var shareButton = document.querySelector("button.ui.facebook.button");
             
             shareButton.addEventListener('click', function () {
