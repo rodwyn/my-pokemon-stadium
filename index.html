@@ -36,21 +36,6 @@
                   }
                 );
             });
-
-            /*$( '.fb-share-image' ).click(function(e){
-                e.preventDefault();
-                var image = $(this).siblings('img').attr('src');
-
-                FB.ui(
-                        {
-                            method: 'share',
-                            href: $(location).attr('href') + '?og_img=' + image,
-                        },
-                        function (response) {
-
-                        }
-                    );
-            })*/
         };
         
         (function(d, s, id) {
@@ -60,17 +45,6 @@
           js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.0';
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-        
-        /*document.onreadystatechange = () => {
-          if (document.readyState === 'complete') {
-              FB.init({
-                  appId      : 'facebook-jssdk',
-                  status     : true,
-                  xfbml      : true,
-                  version    : 'v3.0'
-                });
-          }
-        };*/
     </script>
 <div id="app">
     <section class="row">
