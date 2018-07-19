@@ -22,7 +22,7 @@
                 version          : 'v3.0'                
             });
             
-            var shareButton = document.querySelector("button.ui.facebook.button");
+            var shareButton = document.querySelector("div.ui.facebook.button");
             
             shareButton.addEventListener('click', function () {
                 FB.ui(
@@ -123,7 +123,7 @@
     </section>
 </div>
     <h1>Button</h1>
-    <button class="ui facebook button">Share on Facebook</button>
+    <div class="ui facebook button"><span class="icon-upload"></span>Share on Facebook</div>
 <script src="js/app.js"></script>
 </body>
 </html>
