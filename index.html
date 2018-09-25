@@ -163,7 +163,7 @@
           return Object.keys(params).map(key => key + '=' + params[key]).join('&');
         }
         
-        const data = this.generateQuerySrtring(params);
+        const data = '%7B%0D%0A++++++++++%22comment%22%3A+%22Check+out+developer.linkedin.com%21%22%2C%0D%0A++++++++++%22content%22%3A+%7B%0D%0A++++++++++++%22title%22%3A+%22LinkedIn+Developers+Resources%22%2C%0D%0A++++++++++++%22description%22%3A+%22Leverage+LinkedIn%27s+APIs+to+maximize+engagement%22%2C%0D%0A++++++++++++%22submitted-url%22%3A+%22https%3A%2F%2Fdeveloper.linkedin.com%22%2C++%0D%0A++++++++++++%22submitted-image-url%22%3A+%22https%3A%2F%2Fexample.com%2Flogo.png%22%0D%0A++++++++++%7D%2C%0D%0A++++++++++%22visibility%22%3A+%7B%0D%0A++++++++++++%22code%22%3A+%22anyone%22%0D%0A++++++++++%7D++%0D%0A++++++++%7D';
         
         fetch('https://api.github.com/gists', {
           'method': 'POST',
