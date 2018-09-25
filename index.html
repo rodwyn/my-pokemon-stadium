@@ -38,11 +38,17 @@
       function shareContent() {
 
         // Build the JSON payload containing the content to be shared
-        var payload = { 
-          "comment": "Check out developer.linkedin.com! http://linkd.in/1FC2PyG", 
-          "visibility": { 
+        var payload = {
+          "comment": "Check out developer.linkedin.com!",
+          "content": {
+            "title": "LinkedIn Developers Resources",
+            "description": "Leverage LinkedIn's APIs to maximize engagement",
+            "submitted-url": "https://developer.linkedin.com",  
+            "submitted-image-url": "https://example.com/logo.png"
+          },
+          "visibility": {
             "code": "anyone"
-          } 
+          }  
         };
 
         IN.API.Raw("/people/~/shares?format=json")
@@ -141,48 +147,9 @@
     </section>
 </div>
     <script type="in/Login"></script>
-    <script>
-        const url = "https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Fdeveloper.linkedin.com";
-        
-        debugger;
-        
-        const params = {
-          "comment": "Check out developer.linkedin.com!",
-          "content": {
-            "title": "LinkedIn Developers Resources",
-            "description": "Leverage LinkedIn's APIs to maximize engagement",
-            "submitted-url": "https://developer.linkedin.com",  
-            "submitted-image-url": "https://example.com/logo.png"
-          },
-          "visibility": {
-            "code": "anyone"
-          }  
-        }
-        
-        function generateQuerySrtring (params) {
-          return Object.keys(params).map(key => key + '=' + params[key]).join('&');
-        }
-        
-        const data = '%7B%0D%0A++++++++++%22comment%22%3A+%22Check+out+developer.linkedin.com%21%22%2C%0D%0A++++++++++%22content%22%3A+%7B%0D%0A++++++++++++%22title%22%3A+%22LinkedIn+Developers+Resources%22%2C%0D%0A++++++++++++%22description%22%3A+%22Leverage+LinkedIn%27s+APIs+to+maximize+engagement%22%2C%0D%0A++++++++++++%22submitted-url%22%3A+%22https%3A%2F%2Fdeveloper.linkedin.com%22%2C++%0D%0A++++++++++++%22submitted-image-url%22%3A+%22https%3A%2F%2Fexample.com%2Flogo.png%22%0D%0A++++++++++%7D%2C%0D%0A++++++++++%22visibility%22%3A+%7B%0D%0A++++++++++++%22code%22%3A+%22anyone%22%0D%0A++++++++++%7D++%0D%0A++++++++%7D';
-        
-        fetch(url, {
-          'method': 'POST',
-          'headers': {
-            'Content-Type': 'application/json',
-            'x-li-format': 'json'
-          },
-          'body': data
-          }).then(function(response) {
-            console.log(response);
-            return response.json();
-          }).then(function(data) {
-            console.log('Created Gist:', data.html_url);
-          });
-        
-    </script>
     
-    <!--<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-<script type="IN/Share" data-url="https://rodwyn.github.io"></script>-->
+    <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+    <script type="IN/Share" data-url="https://rodwyn.github.io"></script>
     <h1>Button</h1>
     <div class="ui facebook button"><span class="icon-upload"></span>Share on Facebook</div>
 <script src="js/app.js"></script>
