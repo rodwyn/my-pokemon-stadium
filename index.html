@@ -146,9 +146,38 @@
         
         debugger;
         
-        fetch(url).then(response => {
+        const paramas = {
+          "comment": "Check out developer.linkedin.com!",
+          "content": {
+            "title": "LinkedIn Developers Resources",
+            "description": "Leverage LinkedIn's APIs to maximize engagement",
+            "submitted-url": "https://developer.linkedin.com",  
+            "submitted-image-url": "https://example.com/logo.png"
+          },
+          "visibility": {
+            "code": "anyone"
+          }  
+        }
+        
+        function generateQuerySrtring (params) {
+          return Object.keys(params).map(key => key + '=' + params[key]).join('&');
+        }
+        
+        const data = this.generateQuerySrtring(params);
+        
+        fetch('https://api.github.com/gists', {
+          'method': 'POST',
+          'headers': {
+            'Content-Type': 'application/json',
+            'x-li-format': 'json
+          },
+          'body': data
+          }).then(function(response) {
             console.log(response);
-        });
+            return response.json();
+          }).then(function(data) {
+            console.log('Created Gist:', data.html_url);
+          });
         
     </script>
     
