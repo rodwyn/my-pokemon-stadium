@@ -38,11 +38,17 @@
       function shareContent() {
         debugger;
         // Build the JSON payload containing the content to be shared
-        var payload = { 
-          "comment": "Check out developer.linkedin.com! http://linkd.in/1FC2PyG", 
-          "visibility": { 
+        var payload = {
+          "comment": "Check out developer.linkedin.com!",
+          "content": {
+            "title": "LinkedIn Developers Resources",
+            "description": "Leverage LinkedIn's APIs to maximize engagement",
+            "submitted-url": "https://developer.linkedin.com",  
+            "submitted-image-url": "https://example.com/logo.png"
+          },
+          "visibility": {
             "code": "anyone"
-          } 
+          }  
         };
 
         IN.API.Raw("/people/~/shares?format=json")
