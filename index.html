@@ -18,6 +18,15 @@
     </script>
 
     <script type="text/javascript">
+        function liAuth(){
+           IN.User.authorize(function(){
+               callback();
+           });
+        }
+        
+        IN.API.Profile("me")
+       .fields("firstName", "lastName", "headline")
+       .result(resultFunction);
 
       // Setup an event listener to make an API call once auth is complete
         function onLinkedInLoad() {
@@ -147,6 +156,7 @@
     </section>
 </div>
     <script type="in/Login"></script>
+    <button onclick="liAuth()">log in</button>
     
     <!--<script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
     <script type="IN/Share" data-url="https://rodwyn.github.io"></script>-->
